@@ -1,0 +1,31 @@
+.mainStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-image: linear-gradient(to bottom right, rgba(79, 195, 247, 0.5), rgba(156, 39, 176, 0.5), rgba(214, 85, 26, 0.5));
+    background-size: 200% 200%;
+    
+    max-width: 700px;
+    margin-top: 50px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    animation: move 5s ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
