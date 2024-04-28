@@ -4,7 +4,7 @@ import { useState } from "react";
 import Description from "./Description/Description";
 import Feedback from "./Feedback/Feedback";
 import Options from "./Options/Options";
-import FeedbackCss from "./Feedback/Feedback.module.css"
+import Notification from "./Notification/Notification";
 import css from "./App.module.css"
 
 
@@ -50,9 +50,8 @@ export default function App() {
 
     function resetFeedbacks() {
         setClicks(feedbacks)
-        localStorage.removeItem("feedbackCount")
     }
-
+    
     return (
         <div className={css.mainStyle}>
             <Description
@@ -72,7 +71,7 @@ export default function App() {
                 bad={clicks.bad}
                 total={total}
                 positive={positive}
-            ></Feedback> : <p className={FeedbackCss.nothingToShow}>No Notification yet</p>}
+            ></Feedback> : <Notification></Notification>}
         </div>
     )
 }
